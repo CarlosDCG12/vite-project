@@ -1,58 +1,45 @@
 import Card from "./Card";
+import Card2 from "./Card2";
 import "../assets/styles/contacto.css";
-import linkin from "../assets/imgs/imagen1.svg";
-import green from "../assets/imgs/imagen2.svg";
-import skillet from "../assets/imgs/imagen3.svg";
-import three from "../assets/imgs/imagen4.svg";
-import red from "../assets/imgs/imagen5.svg"
 import '../assets/styles/header.css'
 
 function Contacto() {
   const user = [
     {
-      song: "In The End",
-      rockBand: "Likin Park",
-      album: "Hybrid Theory",
-      logo: <img src={linkin}/>
+      titulo: "Nombre:",
     },
     {
-      song: "Boulevard Of Brokens Dreams",
-      rockBand: "Green Day",
-      album: "American idiot",
-      logo: <img src={green}/>
+      titulo: "Apellidos:",
     },
     {
-      song: "Monster",
-      rockBand: "Skillet",
-      album: "Awake",
-      logo: <img src={skillet}/>
+      titulo: "Correo:",
     },
     {
-      song: "Animal I Have Become",
-      rockBand: "Three Days Grace",
-      album: "One-X",
-      logo: <img src={three}/>
+      titulo: "Contraseña:",
     },
     {
-      song: "Otherside",
-      rockBand: "Red Hot Chili Peppers",
-      album: "Californication",
-      logo: <img src={red}/>
+      titulo: "Confirmar contraseña:",
+    },
+    {
+      titulo: "Dirección:",
+    },
+    {
+      titulo: "Nacionalidad:",
+    },
+    {
+      titulo: "Numero de telefono:",
     }
   ];
 
   return (
     <div className="containerContact-p">
     <div className="containerContact">
-      <h1 className="containerContact-header" >Canciones</h1>
+      <h1 className="containerContact-header" >Registro</h1>
       <div className="containerContact-main">
-        <table>
-          <tr>
-          </tr>
-        </table>
         {user.map((user) => {
-         return <Card logo={user.logo} song={user.song} rockband={user.rockBand} albuM ={user.album}/>
+          return <Card titulo={user.titulo} />
         })}
+        <Card2></Card2>
       </div>
     </div>
     </div>

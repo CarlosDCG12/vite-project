@@ -1,17 +1,14 @@
-function Card({logo, song, rockband, albuM}){
+function Card({titulo}){
 
     return(
         <div className="containerContact-p">
             <div className="containerContact-card">
-                {logo}
                 <table>
                     <tr>
-                        <th>Cancion: {song}</th>
+                        <th>{titulo}</th>
                     </tr>
-                   
                     <tr>
-                        <td>Banda: {rockband}</td>
-                        <td>Album: {albuM}</td>
+                        <input></input>
                     </tr>
                 </table>
             </div>
